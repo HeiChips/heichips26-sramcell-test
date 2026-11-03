@@ -1,35 +1,39 @@
 # This the configuration file for your submission.
 # Please edit the fields below to match your project.
 
-project-name: Cool Project
-top-cell: "heichips26_digital_project" # Must be a unique name
+project-name: SRAM Cell Test
+top-cell: "heichips26_sramcell_test" # Must be a unique name
 team-members:
-- Firstname Lastname
-- Firstname Lastname
-- Firstname Lastname
-slot-size: small # small, large, tiny
-analog-pins: 0 # 0-3, only for small or tiny projects
+- Leo Moser
+slot-size: tiny # small, large, tiny
+analog-pins: 3 # 0-3, only for small or tiny projects
 uses-vapwr: false # set to "true" if separate analog power domain is needed
-short-description: This is a super cool project!
+short-description: A test of using sram cells directly as configuration memory.
 # Please add the documentation about your project here.
 # Why did you choose to create it? How does it work? How can it be tested, etc.?
 # If your project requires additional external hardware, e.g. a USB port,
 # please mention this so we can consider it when designing the HeiChips PCB.
 long-description: |
-  Is this thing on?
+  This project uses a single column of a 6T SRAM bitcell array directly connected to the project outputs, to be evaluated as configuration memory for an FPGA.
   
-  This is a super cool project 👏
+  The SRAM bitcell array is generated using [c4m-arrakeen-memgen](https://gitlab.com/Chips4Makers/c4m-arrakeen-memgen/-/tree/lut), more specifically, using the [lut branch](https://gitlab.com/Chips4Makers/c4m-arrakeen-memgen/-/tree/lut) and running `uv run gen_16x1.py`.
+
+  Two macros are implemented using LibreLane in order to select the row to write to (`wl`) and to write the bit data (`bl`/`bl_n`). Two `sg13cmos5l_ebufn_8` are used to write to `bl` and `bl_n`.
+
+  The array holds 16 bits and can be accessed as follows:
+
+  - `io_in[0]` - we_i (enable the write buffers)
+  - `ui_in[1]` - in_i (the bit to write)
+  - `ui_in[5:2]` - addr_i (address of the bitcell array)
+  - `uo_out[7:0]` - `bit[8:15]`
+  - `uio_out[7:0]` - `bit[0:7]`
   
-  * with
-  * bullet
-  * points
-  
-  **nice** *formatting* and [links](https://heichips.github.io/).
+  Additionally, `bit[13:15]` are connected to `analog_[2:0]` in reverse order.
 
 # These paths are used to verify your
 # submission during the precheck.
 # Wildcards are allowed, but there
 # should only be a single match.
-gds-path: macros/heichips26_digital_project/final/gds/*.gds
-lef-path: macros/heichips26_digital_project/final/lef/*.lef
-header-path: macros/heichips26_digital_project/final/vh/*.vh
+gds-path: macros/heichips26_sramcell_test/final/gds/*.gds
+lef-path: macros/heichips26_sramcell_test/final/lef/*.lef
+header-path: macros/heichips26_sramcell_test/final/vh/*.vh

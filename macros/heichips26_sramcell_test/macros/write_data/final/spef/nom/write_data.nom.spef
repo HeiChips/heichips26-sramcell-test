@@ -1,0 +1,182 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "write_data"
+*DATE "14:21:56 Tuesday November 03, 2026"
+*VENDOR "The OpenROAD Project"
+*PROGRAM "OpenROAD"
+*VERSION "dcf36133a369abc8f3c5e5738cd4d82e4903c0e0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*3 in_i
+*4 out_no
+*5 out_o
+*6 we_i
+*7 _0_
+*8 _1_
+*9 net1
+*10 net2
+*11 FILLER_0_11
+*12 FILLER_0_18
+*13 FILLER_0_30
+*14 FILLER_0_37
+*15 FILLER_0_4
+*16 FILLER_0_44
+*17 FILLER_0_51
+*18 FILLER_0_55
+*19 FILLER_1_0
+*20 FILLER_1_14
+*21 FILLER_1_41
+*22 FILLER_1_48
+*23 FILLER_1_55
+*24 FILLER_1_7
+*25 FILLER_2_0
+*26 FILLER_2_39
+*27 FILLER_2_46
+*28 FILLER_2_53
+*29 FILLER_2_55
+*30 FILLER_2_7
+*31 FILLER_3_11
+*32 FILLER_3_18
+*33 FILLER_3_25
+*34 FILLER_3_29
+*35 FILLER_3_4
+*36 FILLER_3_40
+*37 FILLER_3_47
+*38 FILLER_3_54
+*39 _2_
+*40 _3_
+*41 input1
+*42 input2
+*43 tristate\[0\]\.ebufn_no
+*44 tristate\[0\]\.ebufn_o
+
+*PORTS
+in_i I
+out_no O
+out_o O
+we_i I
+
+*D_NET *3 0.000408673
+*CONN
+*P in_i I
+*I *41:A I *D sg13cmos5l_buf_1
+*CAP
+1 in_i 0.000204336
+2 *41:A 0.000204336
+3 *41:A *9:10 0
+*RES
+1 in_i *41:A 42.4926 
+*END
+
+*D_NET *4 0.0014919
+*CONN
+*P out_no O
+*I *43:Z O *D sg13cmos5l_ebufn_8
+*CAP
+1 out_no 0.00074595
+2 *43:Z 0.00074595
+*RES
+1 *43:Z out_no 49.3318 
+*END
+
+*D_NET *5 0.00135758
+*CONN
+*P out_o O
+*I *44:Z O *D sg13cmos5l_ebufn_8
+*CAP
+1 out_o 0.000678791
+2 *44:Z 0.000678791
+3 out_o *8:10 0
+*RES
+1 *44:Z out_o 48.4666 
+*END
+
+*D_NET *6 0.000399082
+*CONN
+*P we_i I
+*I *42:A I *D sg13cmos5l_buf_1
+*CAP
+1 we_i 0.000199541
+2 *42:A 0.000199541
+*RES
+1 we_i *42:A 42.4926 
+*END
+
+*D_NET *7 0.00134591
+*CONN
+*I *44:TE_B I *D sg13cmos5l_ebufn_8
+*I *43:TE_B I *D sg13cmos5l_ebufn_8
+*I *40:Y O *D sg13cmos5l_inv_8
+*CAP
+1 *44:TE_B 0
+2 *43:TE_B 0
+3 *40:Y 0.000154693
+4 *7:25 0.000329684
+5 *7:12 7.11907e-05
+6 *7:6 0.000555568
+7 *7:6 *43:A 0
+8 *7:12 *8:10 0.000234772
+9 *7:25 *39:A 0
+10 *7:25 *8:10 0
+*RES
+1 *40:Y *7:6 21.6171 
+2 *7:6 *7:12 41.0918 
+3 *7:12 *43:TE_B 20 
+4 *7:6 *7:25 43.4196 
+5 *7:25 *44:TE_B 20 
+*END
+
+*D_NET *8 0.00152599
+*CONN
+*I *43:A I *D sg13cmos5l_ebufn_8
+*I *39:Y O *D sg13cmos5l_inv_8
+*CAP
+1 *43:A 3.41668e-05
+2 *39:Y 0.000611441
+3 *8:10 0.000645608
+4 out_o *8:10 0
+5 *7:6 *43:A 0
+6 *7:12 *8:10 0.000234772
+7 *7:25 *8:10 0
+*RES
+1 *39:Y *8:10 47.1894 
+2 *8:10 *43:A 40.3193 
+*END
+
+*D_NET *9 0.00188565
+*CONN
+*I *39:A I *D sg13cmos5l_inv_8
+*I *44:A I *D sg13cmos5l_ebufn_8
+*I *41:X O *D sg13cmos5l_buf_1
+*CAP
+1 *39:A 0.000347014
+2 *44:A 0.000212891
+3 *41:X 0.000382922
+4 *9:10 0.000942827
+5 *41:A *9:10 0
+6 *7:25 *39:A 0
+*RES
+1 *41:X *9:10 43.8522 
+2 *9:10 *44:A 42.266 
+3 *9:10 *39:A 44.0582 
+*END
+
+*D_NET *10 0.00109125
+*CONN
+*I *40:A I *D sg13cmos5l_inv_8
+*I *42:X O *D sg13cmos5l_buf_1
+*CAP
+1 *40:A 4.65995e-05
+2 *42:X 0.000499023
+3 *10:8 0.000545623
+*RES
+1 *42:X *10:8 44.7998 
+2 *10:8 *40:A 40.5356 
+*END

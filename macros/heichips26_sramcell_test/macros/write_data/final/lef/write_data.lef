@@ -1,0 +1,78 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO write_data
+  CLASS BLOCK ;
+  FOREIGN write_data ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 35.000 BY 22.680 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 9.840 3.560 13.840 19.120 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 3.840 3.560 7.840 19.120 ;
+    END
+  END VPWR
+  PIN in_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 16.180 0.400 16.580 ;
+    END
+  END in_i
+  PIN out_no
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.827200 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 5.260 35.000 5.660 ;
+    END
+  END out_no
+  PIN out_o
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.827200 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 16.180 35.000 16.580 ;
+    END
+  END out_o
+  PIN we_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 5.260 0.400 5.660 ;
+    END
+  END we_i
+  OBS
+      LAYER GatPoly ;
+        RECT 3.840 3.630 30.720 19.050 ;
+      LAYER Metal1 ;
+        RECT 3.840 3.560 30.720 19.120 ;
+      LAYER Metal2 ;
+        RECT 3.895 3.635 21.705 19.045 ;
+      LAYER Metal3 ;
+        RECT 0.400 16.790 34.600 19.000 ;
+        RECT 0.610 15.970 34.390 16.790 ;
+        RECT 0.400 5.870 34.600 15.970 ;
+        RECT 0.610 5.050 34.390 5.870 ;
+        RECT 0.400 3.680 34.600 5.050 ;
+  END
+END write_data
+END LIBRARY
+

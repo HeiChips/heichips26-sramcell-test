@@ -1,0 +1,254 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO row_decoder
+  CLASS BLOCK ;
+  FOREIGN row_decoder ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 35.000 BY 30.240 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 9.840 3.560 13.840 26.680 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 3.840 3.560 7.840 26.680 ;
+    END
+  END VPWR
+  PIN addr_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 3.580 0.400 3.980 ;
+    END
+  END addr_i[0]
+  PIN addr_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 11.140 0.400 11.540 ;
+    END
+  END addr_i[1]
+  PIN addr_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 18.700 0.400 19.100 ;
+    END
+  END addr_i[2]
+  PIN addr_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 26.260 0.400 26.660 ;
+    END
+  END addr_i[3]
+  PIN rows_o[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 1.900 35.000 2.300 ;
+    END
+  END rows_o[0]
+  PIN rows_o[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 18.700 35.000 19.100 ;
+    END
+  END rows_o[10]
+  PIN rows_o[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 20.380 35.000 20.780 ;
+    END
+  END rows_o[11]
+  PIN rows_o[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 22.060 35.000 22.460 ;
+    END
+  END rows_o[12]
+  PIN rows_o[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 23.740 35.000 24.140 ;
+    END
+  END rows_o[13]
+  PIN rows_o[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 25.420 35.000 25.820 ;
+    END
+  END rows_o[14]
+  PIN rows_o[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 27.100 35.000 27.500 ;
+    END
+  END rows_o[15]
+  PIN rows_o[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 3.580 35.000 3.980 ;
+    END
+  END rows_o[1]
+  PIN rows_o[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 5.260 35.000 5.660 ;
+    END
+  END rows_o[2]
+  PIN rows_o[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 6.940 35.000 7.340 ;
+    END
+  END rows_o[3]
+  PIN rows_o[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 8.620 35.000 9.020 ;
+    END
+  END rows_o[4]
+  PIN rows_o[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 10.300 35.000 10.700 ;
+    END
+  END rows_o[5]
+  PIN rows_o[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 11.980 35.000 12.380 ;
+    END
+  END rows_o[6]
+  PIN rows_o[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 13.660 35.000 14.060 ;
+    END
+  END rows_o[7]
+  PIN rows_o[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 15.340 35.000 15.740 ;
+    END
+  END rows_o[8]
+  PIN rows_o[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.708600 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 34.600 17.020 35.000 17.420 ;
+    END
+  END rows_o[9]
+  OBS
+      LAYER GatPoly ;
+        RECT 3.840 3.630 30.720 26.610 ;
+      LAYER Metal1 ;
+        RECT 3.840 3.560 30.720 26.680 ;
+      LAYER Metal2 ;
+        RECT 3.895 3.215 31.785 27.445 ;
+      LAYER Metal3 ;
+        RECT 0.400 26.890 34.390 27.400 ;
+        RECT 0.400 26.870 34.660 26.890 ;
+        RECT 0.610 26.050 34.660 26.870 ;
+        RECT 0.400 26.030 34.660 26.050 ;
+        RECT 0.400 25.210 34.390 26.030 ;
+        RECT 0.400 24.350 34.660 25.210 ;
+        RECT 0.400 23.530 34.390 24.350 ;
+        RECT 0.400 22.670 34.660 23.530 ;
+        RECT 0.400 21.850 34.390 22.670 ;
+        RECT 0.400 20.990 34.660 21.850 ;
+        RECT 0.400 20.170 34.390 20.990 ;
+        RECT 0.400 19.310 34.660 20.170 ;
+        RECT 0.610 18.490 34.390 19.310 ;
+        RECT 0.400 17.630 34.660 18.490 ;
+        RECT 0.400 16.810 34.390 17.630 ;
+        RECT 0.400 15.950 34.660 16.810 ;
+        RECT 0.400 15.130 34.390 15.950 ;
+        RECT 0.400 14.270 34.660 15.130 ;
+        RECT 0.400 13.450 34.390 14.270 ;
+        RECT 0.400 12.590 34.660 13.450 ;
+        RECT 0.400 11.770 34.390 12.590 ;
+        RECT 0.400 11.750 34.660 11.770 ;
+        RECT 0.610 10.930 34.660 11.750 ;
+        RECT 0.400 10.910 34.660 10.930 ;
+        RECT 0.400 10.090 34.390 10.910 ;
+        RECT 0.400 9.230 34.660 10.090 ;
+        RECT 0.400 8.410 34.390 9.230 ;
+        RECT 0.400 7.550 34.660 8.410 ;
+        RECT 0.400 6.730 34.390 7.550 ;
+        RECT 0.400 5.870 34.660 6.730 ;
+        RECT 0.400 5.050 34.390 5.870 ;
+        RECT 0.400 4.190 34.660 5.050 ;
+        RECT 0.610 3.370 34.390 4.190 ;
+        RECT 0.400 2.510 34.660 3.370 ;
+        RECT 0.400 2.000 34.390 2.510 ;
+      LAYER Metal4 ;
+        RECT 24.860 12.455 25.060 14.845 ;
+  END
+END row_decoder
+END LIBRARY
+
